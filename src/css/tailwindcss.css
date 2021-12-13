@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body::before {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #52c4df, #ad55c1);
+  opacity: 0.3;
+  min-height: 100vh;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .background-transparent {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+}
+@media (min-width: 1024px) {
+  .background-transparent-lg {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+}

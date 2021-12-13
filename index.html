@@ -8,8 +8,33 @@
   <title>Vite App</title>
 </head>
 
-<body>
-  <div id="app" class="w-screen h-screen bg-red-300"></div>
+<body class="bg-bgDefault bg-center bg-no-repeat bg-cover">
+  <section class="w-screen min-h-[100vh] flex flex-col lg:flex-row">
+    <!--  start hero -->
+    <div id="hero"
+      class="w-full lg:w-[25%] h-40 lg:h-screen flex flex-row justify-center items-center my-5 lg:my-0 background-transparent-lg">
+      <div
+        class="h-full w-3/4 lg:w-full flex flex-col items-center justify-center overflow-hidden background-transparent rounded-xl lg:rounded-none">
+        <div class="h-3/5 lg:h-1/2 flex flex-row lg:flex-col justify-center items-center lg:items-end">
+          <img v-if="icon" class="lg:w-36 lg:h-36" :src="icon" alt="icon">
+          <span class="text-3xl lg:text-5xl text-center w-full"> {{temp}} </span>
+        </div>
+        <div class="h-2/5 lg:h-1/2 flex flex-col justify-center items-center lg:justify-start">
+          <div class="flex flex-col">
+            <span class="text-xl lg:text-3xl text-center"> {{tempMin}} / {{tempMax}} </span>
+            <span class="text-xl lg:text-3xl text-center"> {{name}} </span>
+          </div>
+        </div>
+      </div>
+      <!-- end hero⁄ -->
+    </div>
+  </section>
+
+  <!-- script -->
+  <script src="https://unpkg.com/vue@3.2.24/dist/vue.global.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 

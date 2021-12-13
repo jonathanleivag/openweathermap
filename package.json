@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev:server": "vite",
-    "dev:css":"npx tailwindcss -i ./src/css/tailwindcss.css -o ./src/css/style.css --watch",
+    "dev:css": "npx tailwindcss -i ./src/css/tailwindcss.css -o ./src/css/style.css --watch",
     "build": "npx tailwindcss -i ./src/css/tailwindcss.css -o ./src/css/style.css --minify && vite build",
     "preview": "vite preview"
   },
