@@ -1,4 +1,3 @@
-import '../../../css/style.css'
 import axiosWeather from '../../helpers/api/axiosWeather'
 import {
   backgroundImage,
@@ -44,6 +43,7 @@ Vue.createApp({
         )
       } catch (error) {
         Toast('error', error.message)
+        this.dataDefault()
       }
     },
     async error () {

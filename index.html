@@ -14,7 +14,7 @@
     <div id="hero"
       class="w-full lg:w-[25%] h-40 lg:h-screen flex flex-row justify-center items-center my-5 lg:my-0 background-transparent-lg">
       <div
-        class="h-full w-3/4 lg:w-full flex flex-col items-center justify-center overflow-hidden background-transparent rounded-xl lg:rounded-none">
+        class="h-full w-3/4 lg:w-full flex flex-col items-center justify-center overflow-hidden background-transparent-sm rounded-xl lg:rounded-none">
         <div class="h-3/5 lg:h-1/2 flex flex-row lg:flex-col justify-center items-center lg:items-end">
           <img v-if="icon" class="lg:w-36 lg:h-36" :src="icon" alt="icon">
           <span class="text-3xl lg:text-5xl text-center w-full"> {{temp}} </span>
@@ -28,6 +28,29 @@
       </div>
       <!-- end hero⁄ -->
     </div>
+    <!-- content start -->
+    <div class="w-full lg:w-[75%] flex flex-col items-center min-h-[calc(100vh-160px-20px)]">
+      <!-- Current weather data start -->
+      <div class="w-4/5 lg:mt-12 mb-3 text-xl">
+        <h2><span>Pronóstico para los próximos días.</span></h2>
+      </div>
+      <div id="day" class="w-4/5 h-36 lg:mb-12 rounded-lg overflow-x-auto flex flex-row gap-4 snap-x">
+        <div v-for="(daily, index) in dailys" :key="index"
+          class="h-full w-32 rounded-lg snap-center shrink-0 background-transparent flex flex-col justify-center items-center">
+          <div class="flex flex-row justify-center items-center">
+            <img :src="daily.icon" alt="Icons de tiempo">
+          </div>
+          <div class="flex flex-row justify-center items-center">
+            <span> {{daily.min}} / {{daily.max}} </span>
+          </div>
+          <div class="flex flex-row justify-center items-center">
+            <span> {{daily.day}} </span>
+          </div>
+        </div>
+      </div>
+      <!-- Current weather data end -->
+    </div>
+    <!-- content end -->
   </section>
 
   <!-- script -->

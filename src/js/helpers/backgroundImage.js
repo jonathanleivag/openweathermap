@@ -21,5 +21,4 @@ export async function changeBackground (image = '') {
     body.classList.remove('bg-bgDefault')
     body.style.backgroundImage = `url(${image})`
   }
-  console.log(image)
 }
