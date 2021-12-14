@@ -24,6 +24,12 @@ body::before {
   backdrop-filter: blur(10px);
 }
 
+.background-transparent-button {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
 @media (max-width: 1024px) {
   .background-transparent-sm {
     background: rgba(255, 255, 255, 0.05);

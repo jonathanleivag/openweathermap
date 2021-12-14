@@ -60,6 +60,9 @@ Vue.createApp({
       this.name = data.name
       this.icon = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
       changeBackground()
+    },
+    refresh () {
+      location.reload()
     }
   },
   created () {

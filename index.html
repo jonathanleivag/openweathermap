@@ -18,6 +18,30 @@
       class="w-full lg:w-[25%] h-40 lg:h-screen flex flex-row justify-center items-center my-5 lg:my-0 background-transparent-lg">
       <div
         class="h-full w-3/4 lg:w-full flex flex-col items-center justify-center overflow-hidden background-transparent-sm rounded-xl lg:rounded-none">
+
+        <!-- button -->
+        <div class="w-full flex flex-row justify-center my-2">
+          <div class="w-[90%] flex flex-row">
+            <div class="w-1/2 flex flex-row">
+              <button @click="refresh">
+                <div
+                  class="w-8 h-8 rounded-full mx-1 background-transparent-button flex flex-row justify-center items-center">
+                  <span><i class="fas fa-redo text-xl"></i></span>
+                </div>
+              </button>
+              <div class="w-8 h-8 rounded-full mx-1 background-transparent-button">
+                hola
+              </div>
+            </div>
+            <div class="w-1/2 flex flex-row justify-end">
+              <div class="w-8 h-8 rounded-full background-transparent-button">
+                hola
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end button -->
+
         <div class="h-3/5 lg:h-1/2 flex flex-row lg:flex-col justify-center items-center lg:items-end">
           <img v-if="icon" class="lg:w-36 lg:h-36" :src="icon" alt="icon">
           <span class="text-3xl lg:text-5xl text-center w-full"> {{temp}} </span>
