@@ -25,14 +25,14 @@
           <div class="w-[98%] lg:w-[90%] flex flex-row">
             <div class="w-1/2 flex flex-row">
 
-              <button @click="refresh">
+              <button class="focus:outline-none" @click="refresh">
                 <div
                   class="w-8 h-8 rounded-full mx-1 background-transparent-button flex flex-row justify-center items-center">
                   <span><i class="fas fa-redo text-xl"></i></span>
                 </div>
               </button>
 
-              <button @click="gps">
+              <button class="focus:outline-none" @click="gps">
                 <div
                   class="w-8 h-8 rounded-full mx-1 background-transparent-button flex flex-row justify-center items-center">
                   <span><i class="fas fa-map-marker-alt text-xl"></i></span>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="w-1/2 flex flex-row justify-end">
-              <button @click="search">
+              <button class="focus:outline-none" @click="search">
                 <div
                   class="w-8 h-8 rounded-full background-transparent-button flex flex-row justify-center items-center">
                   <span><i class="fas fa-search"></i></span>
