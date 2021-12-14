@@ -6,6 +6,9 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg-bgDefault bg-center bg-no-repeat bg-cover">
@@ -31,10 +34,10 @@
     <!-- content start -->
     <div class="w-full lg:w-[75%] flex flex-col items-center min-h-[calc(100vh-160px-20px)]">
       <!-- Current weather data start -->
-      <div class="w-4/5 lg:mt-12 mb-3 text-xl">
+      <div class="w-4/5 lg:mt-5 mb-3 text-xl">
         <h2><span>Pronóstico para los próximos días.</span></h2>
       </div>
-      <div id="day" class="w-4/5 h-36 lg:mb-12 rounded-lg overflow-x-auto flex flex-row gap-4 snap-x">
+      <div id="day" class="w-4/5 h-36 lg:mb-5 rounded-lg overflow-x-auto flex flex-row gap-4 snap-x">
         <div v-for="(daily, index) in dailys" :key="index"
           class="h-full w-32 rounded-lg snap-center shrink-0 background-transparent flex flex-col justify-center items-center">
           <div class="flex flex-row justify-center items-center">
@@ -49,6 +52,90 @@
         </div>
       </div>
       <!-- Current weather data end -->
+
+      <!-- info  start -->
+      <div class="w-4/5 mt-5 mb-3 text-xl">
+        <h2><span>Información del tiempo</span></h2>
+      </div>
+      <div id="info" class="w-full flex flex-row justify-center">
+        <div class="w-4/5 grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <!-- 1 -->
+          <div class="w-full h-44 background-transparent">
+            <div class="w-full h-full flex flex-row justify-center items-center">
+              <div class="w-[60%] h-[60%] flex flex-row justify-center items-center">
+                <div class="w-[20%] h-full flex flex-row justify-center items-center">
+                  <i class="fas fa-water text-blue-600 text-3xl"></i>
+                </div>
+                <div class="w-[80%] h-full flex flex-col">
+                  <div class="h-1/2 w-full flex flex-row justify-center items-end text-xl lg:text-3xl">
+                    <span>Humedad</span>
+                  </div>
+                  <div class="h-1/2 w-full flex flex-row justify-center items-start text-xl lg:text-3xl">
+                    <span>{{humidity}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="w-full h-44 background-transparent">
+            <div class="w-full h-full flex flex-row justify-center items-center">
+              <div class="w-[60%] h-[60%] flex flex-row justify-center items-center">
+                <div class="w-[20%] h-full flex flex-row justify-center items-center">
+                  <i class="fas fa-tachometer-alt text-blue-600 text-3xl"></i>
+                </div>
+                <div class="w-[80%] h-full flex flex-col">
+                  <div class="h-1/2 w-full flex flex-row justify-center items-end text-xl lg:text-3xl">
+                    <span>Presión</span>
+                  </div>
+                  <div class="h-1/2 w-full flex flex-row justify-center items-start text-xl lg:text-3xl">
+                    <span>{{pressure}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="w-full h-44 background-transparent">
+            <div class="w-full h-full flex flex-row justify-center items-center">
+              <div class="w-[60%] h-[60%] flex flex-row justify-center items-center">
+                <div class="w-[20%] h-full flex flex-row justify-center items-center">
+                  <i class="fas fa-wind text-blue-600 text-3xl"></i>
+                </div>
+                <div class="w-[80%] h-full flex flex-col">
+                  <div class="h-1/2 w-full flex flex-row justify-center items-end text-xl">
+                    <span>Viento</span>
+                  </div>
+                  <div class="h-1/2 w-full flex flex-row justify-center items-start text-xl">
+                    <span>{{wind}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="w-full h-44 background-transparent">
+            <div class="w-full h-full flex flex-row justify-center items-center">
+              <div v-if="sys" class="w-[60%] h-[60%] flex flex-col justify-center items-center">
+                <div class="text-xl lg:text-3xl flex flex-row">
+                  <i class="fas fa-sun text-blue-600 text-3xl mx-2"></i>
+                  <span>{{sys.sunrise}}</span>
+                </div>
+                <div class="text-xl lg:text-3xl flex flex-row">
+                  <i class="fas fa-moon text-blue-600 text-3xl mx-2"></i>
+                  <span>{{sys.sunset}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- info  end -->
+
+      <footer class="w-full flex flex-row justify-center text-sm my-3">
+        <span>openweathermap - jonathanleivag</span>
+      </footer>
+
     </div>
     <!-- content end -->
   </section>

@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply overflow-y-auto lg:overflow-hidden;
+}
+
 body::before {
   content: '';
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: linear-gradient(90deg, #52c4df, #ad55c1);
