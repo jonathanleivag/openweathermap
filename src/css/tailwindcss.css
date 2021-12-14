@@ -44,3 +44,15 @@ body::before {
     backdrop-filter: blur(10px);
   }
 }
+
+.swal2-container.swal2-center .swal2-popup {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: #c4c4c4;
+  @apply rounded-xl;
+}
+
+.swal2-input {
+  @apply rounded-full;
+}
