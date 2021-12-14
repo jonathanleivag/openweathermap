@@ -3,6 +3,5 @@ export default axios.create({
   timeout: 5000,
   params: {
     appid: import.meta.env.VITE_API_WEATHER
-  },
-  timeout: 1000
+  }
 })
