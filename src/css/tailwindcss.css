@@ -3,7 +3,18 @@
 @tailwind utilities;
 
 body {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
   @apply overflow-y-auto lg:overflow-hidden;
+}
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+  height: 0 !important;
+  width: 0 !important;
 }
 
 body::before {

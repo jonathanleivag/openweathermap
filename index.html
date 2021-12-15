@@ -67,12 +67,13 @@
       <!-- end hero⁄ -->
     </div>
     <!-- content start -->
-    <div class="w-full lg:w-[75%] flex flex-col items-center min-h-[calc(100vh-160px-20px)]">
+    <div
+      class="w-full lg:w-[75%] flex flex-col items-center min-h-[calc(100vh-160px-20px)] lg:h-screen lg:overflow-y-auto scroll">
       <!-- Current weather data start -->
-      <div class="w-4/5 lg:mt-5 mb-3 text-xl">
+      <div class="lg:shrink-0 w-4/5 lg:mt-5 mb-3 text-xl">
         <h2><span>Pronóstico para los próximos días.</span></h2>
       </div>
-      <div class="w-4/5 h-36 lg:mb-5 rounded-lg overflow-x-auto flex flex-row gap-4 snap-x scroll">
+      <div class="lg:shrink-0 w-4/5 h-36 lg:mb-5 rounded-lg overflow-x-auto flex flex-row gap-4 snap-x scroll">
         <div v-for="(daily, index) in dailys" :key="index"
           class="h-full w-32 rounded-lg snap-center shrink-0 background-transparent flex flex-col justify-center items-center">
           <div class="flex flex-row justify-center items-center">
@@ -89,13 +90,13 @@
       <!-- Current weather data end -->
 
       <!-- info  start -->
-      <div class="w-4/5 mt-5 mb-3 text-xl">
+      <div class="lg:shrink-0 w-4/5 mt-5 mb-3 text-xl">
         <h2><span>Información del tiempo</span></h2>
       </div>
-      <div class="w-full flex flex-row justify-center">
+      <div class="lg:shrink-0 w-full flex flex-row justify-center">
         <div class="w-4/5 grid grid-cols-1 lg:grid-cols-2 gap-4">
           <!-- 1 -->
-          <div class="w-full h-44 background-transparent">
+          <div class="lg:shrink-0 w-full h-44 background-transparent">
             <div class="w-full h-full flex flex-row justify-center items-center">
               <div class="w-[60%] h-[60%] flex flex-row justify-center items-center">
                 <div class="w-[20%] h-full flex flex-row justify-center items-center">
@@ -113,7 +114,7 @@
             </div>
           </div>
           <!-- 2 -->
-          <div class="w-full h-44 background-transparent">
+          <div class="lg:shrink-0 w-full h-44 background-transparent">
             <div class="w-full h-full flex flex-row justify-center items-center">
               <div class="w-[60%] h-[60%] flex flex-row justify-center items-center">
                 <div class="w-[20%] h-full flex flex-row justify-center items-center">
@@ -131,7 +132,7 @@
             </div>
           </div>
           <!-- 3 -->
-          <div class="w-full h-44 background-transparent">
+          <div class="lg:shrink-0 w-full h-44 background-transparent">
             <div class="w-full h-full flex flex-row justify-center items-center">
               <div class="w-[60%] h-[60%] flex flex-row justify-center items-center">
                 <div class="w-[20%] h-full flex flex-row justify-center items-center">
@@ -149,7 +150,7 @@
             </div>
           </div>
           <!-- 4 -->
-          <div class="w-full h-44 background-transparent">
+          <div class="lg:shrink-0 w-full h-44 background-transparent">
             <div class="w-full h-full flex flex-row justify-center items-center">
               <div v-if="sys" class="w-[60%] h-[60%] flex flex-col justify-center items-center">
                 <div class="text-xl lg:text-3xl flex flex-row">
@@ -167,7 +168,7 @@
       </div>
       <!-- info  end -->
 
-      <footer class="w-full flex flex-row justify-center text-sm my-3">
+      <footer class="lg:shrink-0 w-full flex flex-row justify-center text-sm my-3">
         <span>openweathermap - jonathanleivag</span>
       </footer>
 
